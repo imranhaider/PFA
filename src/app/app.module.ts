@@ -11,6 +11,12 @@ import {appRoutes} from "./app.routes";
 import {HomeComponent} from "./pages/home/home.component";
 import { IncomeComponent } from './components/income/income.component';
 import { EditIncomeComponent } from './components/income/edit-income/edit-income.component';
+import { ExpenseComponent } from './components/expense/expense.component';
+import { IncomeService } from './components/income/income.service';
+import { ExpenseCategoryComponent } from './components/expense-category/expense-category.component';
+import { EditExpenseCategoryComponent } from './components/expense-category/edit-expense-category/edit-expense-category.component';
+import { ExpenseCategoryService } from './components/expense-category/expense-category.service';
+import { ExpenseService } from './components/expense/expense.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +25,10 @@ import { EditIncomeComponent } from './components/income/edit-income/edit-income
     Topnavbar,
     HomeComponent,
     IncomeComponent,
-    EditIncomeComponent
+    EditIncomeComponent,
+    ExpenseComponent,
+    ExpenseCategoryComponent,
+    EditExpenseCategoryComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +36,7 @@ import { EditIncomeComponent } from './components/income/edit-income/edit-income
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [IncomeService, ExpenseCategoryService, ExpenseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

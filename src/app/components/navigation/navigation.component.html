@@ -17,18 +17,21 @@
                     </a>
                 </div>
                 <div class="logo-element">
-                    SWWCC
+                    PFA
                 </div>
             </li>
             <li [ngClass]="{active: activeRoute('home')}">
-                <a [routerLink]="['./home']"><i class="fa fa-dashboard"></i> <span class="nav-label">Summary</span></a>
+                <a [routerLink]="['/home']"><i class="fa fa-dashboard"></i> <span class="nav-label">Summary</span></a>
             </li>
-            <li [ngClass]="{active: activeRoute('home')}">
-                <a [routerLink]="['./home']"><i class="fa fa-dashboard"></i> <span class="nav-label">Income</span></a>
+            <li [ngClass]="{active: activeRoute('income')}">
+                <a [routerLink]="['/income']"><i class="fa fa-money"></i> <span class="nav-label">Income</span></a>
             </li>
-            <li [ngClass]="{active: activeRoute('others')}">
-                <a [routerLink]="['./others']"><i class="fa fa-desktop"></i> <span class="nav-label">Expense</span></a>
+            <li [ngClass]="{active: activeRoute('expense')}">
+                <a [routerLink]="['/expense']"><i class="fa fa-dollar"></i><i class="fa fa-dollar"></i> <span class="nav-label">Expense</span></a>
             </li>
+            <li [ngClass]="{active: activeRoute('expense-category')}">
+                    <a [routerLink]="['/expense-category']"><i class="fa fa-dollar"></i> <span class="nav-label">Expense Category</span></a>
+                </li>
         </ul>
 
     </div>
